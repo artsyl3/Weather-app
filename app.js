@@ -1,8 +1,11 @@
-console.log("starting...");
+const postman = require('postman-request');
 
-setTimeout(() => {
-    console.log("done");
-}, 2000)
+const url = 'http://api.weatherstack.com/current?access_key=123b85c29987d638ffa8a55e92a94a40&query=Tehran';
 
-
-console.log("stopping...");
+postman({url:url} , function(error, response){
+    if(error){
+        return console.log(error);
+    }else{
+        console.log(JSON.parse(response.body));
+    }
+})
