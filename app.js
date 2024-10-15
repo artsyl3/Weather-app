@@ -7,7 +7,7 @@ postman({url:url, json:true} , (error, response) =>{
     if(error){
         return console.log(error);
     }else{
-        console.log("It is currently " + data.temperature + " degress out. It feels like " + data.feelslike + " degress out.");
+        console.log(data.weather_descriptions[0] + ". it is currently " + data.temperature + " degress out. It feels like " + data.feelslike + " degress out.");
     }
 });
 
