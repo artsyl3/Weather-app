@@ -4,11 +4,12 @@ const postman = require('postman-request');
 // const url = 'http://api.weatherstack.com/current?access_key=cc4e253f5df50564c454e6fec5be3193&query=Tehran&units=f';
 
 // postman({url:url, json:true} , (error, response) =>{
-//     const data = response.body.current;
+//     const data = response.body;
 //     if(error){
-//         return console.log(error);
+//         return console.log("Nemidonam chi shode");
 //     }else{
 //         console.log(data.weather_descriptions[0] + ". it is currently " + data.temperature + " degress out. It feels like " + data.feelslike + " degress out.");
+//         console.log(data);
 //     }
 // });
 
