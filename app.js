@@ -1,9 +1,9 @@
 const postman = require('postman-request');
-const geoCode = require('./utils/geoCode.js');
-const forecast = require('./utils/forecast.js');
+const geoCode = require('./utils/geoCode');
+const forecast = require('./utils/forecast');
 
 
-forecast(-75.7088, 44.1545, (error, data) => {
+forecast(40.78, -73.97, (error, data) => {
     console.log('Error', error)
     console.log('Data', data)
   })

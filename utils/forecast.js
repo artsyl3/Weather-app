@@ -5,11 +5,11 @@ const forecast = (latitude, longitude, callBack) => {
     postman({url:url, json:true} , (error, response) =>{
         const data = response.body.current;
         if(error){
-            callBack(console.log("Error"));
+            callBack("Error");
         }else if(response.body.success === false){
-            callBack(console.log("Your request was not successful"));
+            callBack("Your request was not successful");
         }else{
-             callBack(console.log(data.weather_descriptions[0] + ". it is currently " + data.temperature + " degress out. It feels like " + data.feelslike + " degress out."));
+             callBack(undefined, data.weather_descriptions[0] + ". it is currently " + data.temperature + " degress out. It feels like " + data.feelslike + " degress out.");
         }
     });
 }
