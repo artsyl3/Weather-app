@@ -16,6 +16,6 @@ const geoCode = (address, callBack) => {
         }
     })
 }
-s
+
 
 module.exports = geoCode;

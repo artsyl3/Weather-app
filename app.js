@@ -1,15 +1,7 @@
 const geoCode = require('./utils/geoCode');
 const forecast = require('./utils/forecast');
 
-
-forecast(40.78, -73.97, (error, data) => {
-    console.log('Error', error)
-    console.log('Data', data)
-  })
-
-
-
-geoCode("Karaj", (error, data) => {
+geoCode("Tehran", (error, data) => {
     if(error) {
         console.log("Error: ", error);
     }else {
@@ -17,5 +9,9 @@ geoCode("Karaj", (error, data) => {
         console.log("Longitude: ", data.longitude);
         console.log("Location: ", data.location);
     }
+    forecast(data.latitude, data.longitude, (error, forecastData) => {
+        console.log('Error', error)
+        console.log('Forecast: ', forecastData)
+    })
 });
 
