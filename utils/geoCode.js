@@ -15,7 +15,7 @@ const geoCode = (address, callBack) => {
             callBack(undefined, {latitude, longitude, location});
         }
     })
-    s
+    
 }
 
 
